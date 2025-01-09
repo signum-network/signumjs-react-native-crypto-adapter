@@ -1,0 +1,35 @@
+{
+  "name": "signumjs-react-native-crypto-adapter",
+  "version": "1.0.0",
+  "description": "This is the React Native implementation of the CryptoAdapter for @signumjs/crypto",
+  "keywords": [],
+  "author": "ohager",
+  "license": "Apache-2.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "compile": "tsc",
+    "test": "vitest run",
+    "test:ci": "vitest run --coverage"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  },
+  "dependencies": {
+    "aes-js": "^3.1.2",
+    "react-native-get-random-values": "^1.11.0"
+  },
+  "devDependencies": {
+    "@signumjs/crypto": "^2.0.1",
+    "@types/aes-js": "^3.1.4",
+    "@types/react-native": "^0.73.0",
+    "esbuild": "^0.24.2",
+    "esbuild-plugin-tsc": "^0.4.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
