@@ -1,11 +1,11 @@
-import {describe, it, expect, test, beforeAll} from 'vitest';
-
+import "./__mocks__/expo-crypto"
+import {describe, expect, test, beforeAll} from 'vitest';
 import {Crypto, sha256AsBase64, sha256AsHex} from "@signumjs/crypto";
-import {ReactNativeCryptoProvider} from "../ReactNativeCryptoProvider";
+import {ReactNativeExpoCryptoProvider} from "../ReactNativeExpoCryptoProvider";
 
 describe('sha256', () => {
     beforeAll(() => {
-        Crypto.getInstance().setCustomProvider(new ReactNativeCryptoProvider())
+        Crypto.getInstance().setCustomProvider(new ReactNativeExpoCryptoProvider())
     })
     // implicitely tests sha256Raw and sha256Byte
     test('Should be able to generate sha256AsHex', () => {

@@ -1,11 +1,11 @@
-// @ts-ignore
-import {describe, it, expect, test, beforeAll} from 'vitest';
+import "./__mocks__/expo-crypto"
+import {describe, expect, test, beforeAll} from 'vitest';
 import {Crypto, getRandomBytes, getRandomString, getRandomWords} from "@signumjs/crypto";
-import {ReactNativeCryptoProvider} from "../ReactNativeCryptoProvider";
+import {ReactNativeExpoCryptoProvider} from "../ReactNativeExpoCryptoProvider";
 
 describe('random', () => {
     beforeAll(() => {
-        Crypto.getInstance().setCustomProvider(new ReactNativeCryptoProvider())
+        Crypto.getInstance().setCustomProvider(new ReactNativeExpoCryptoProvider())
     })
     describe('getRandomBytes', () => {
 

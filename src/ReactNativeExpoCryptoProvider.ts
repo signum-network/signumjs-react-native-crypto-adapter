@@ -1,8 +1,9 @@
-import { CryptoProvider } from '@signumjs/crypto';
+import {CryptoProvider} from '@signumjs/crypto';
 import aesJs from 'aes-js';
-import 'react-native-get-random-values';  // for getRandomValues
+import {getRandomBytes} from "expo-crypto"
+import {sha256} from "js-sha256"
 
-export class ReactNativeCryptoProvider implements CryptoProvider {
+export class ReactNativeExpoCryptoProvider implements CryptoProvider {
     async encryptAes256Cbc(plaintext: Uint8Array, key: Uint8Array): Promise<Uint8Array> {
         const iv = this.getRandomValues(new Uint8Array(16));
         const aesCbc = new aesJs.ModeOfOperation.cbc(key, iv);
@@ -37,14 +38,15 @@ export class ReactNativeCryptoProvider implements CryptoProvider {
     }
 
     sha256(data: ArrayBuffer): Uint8Array {
-        // Note: You'll need a separate SHA-256 implementation
-        // Could use the 'hash.js' library which is also pure JS
-        throw new Error('SHA256 implementation needed');
+        const hasher = sha256.update(data)
+        return new Uint8Array(hasher.arrayBuffer());
     }
 
     getRandomValues(array: Uint8Array): Uint8Array {
-        return crypto.getRandomValues(array);
+        array.set(getRandomBytes(array.length))
+        return array;
     }
+
 
     private pkcs7Pad(data: Uint8Array): Uint8Array {
         const padder = 16 - (data.length % 16);

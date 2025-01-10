@@ -21,14 +21,15 @@
   },
   "dependencies": {
     "aes-js": "^3.1.2",
+    "expo": "^52.0.24",
+    "expo-crypto": "~14.0.1",
+    "js-sha256": "^0.11.0",
     "react-native-get-random-values": "^1.11.0"
   },
   "devDependencies": {
     "@signumjs/crypto": "^2.0.1",
     "@types/aes-js": "^3.1.4",
     "@types/react-native": "^0.73.0",
-    "esbuild": "^0.24.2",
-    "esbuild-plugin-tsc": "^0.4.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }

@@ -1,4 +1,5 @@
-import {describe, it, expect, beforeAll} from 'vitest';
+import "./__mocks__/expo-crypto"
+import {describe, it, expect, beforeAll, vi} from 'vitest';
 import {
     CryptoError,
     decryptData,
@@ -8,12 +9,13 @@ import {
     generateSignKeys,
     Crypto
 } from "@signumjs/crypto";
-import {ReactNativeCryptoProvider} from "../ReactNativeCryptoProvider";
+
+import {ReactNativeExpoCryptoProvider} from "../ReactNativeExpoCryptoProvider";
 
 describe('Encrypt and Decrypt - No Crypto-JS', () => {
 
     beforeAll(() => {
-        Crypto.getInstance().setCustomProvider(new ReactNativeCryptoProvider())
+        Crypto.getInstance().setCustomProvider(new ReactNativeExpoCryptoProvider())
     })
 
     describe('Data', () => {
