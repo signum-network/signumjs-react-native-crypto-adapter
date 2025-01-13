@@ -1,4 +1,4 @@
-# signumjs-react-native-crypto-adapter
+# SignumJS Crypto Adapter for React Native EXPO
 
 This is the React Native Expo implementation of the CryptoAdapter for [@signumjs/crypto](https://signum-network.github.io/signumjs/modules/crypto.html)
 
