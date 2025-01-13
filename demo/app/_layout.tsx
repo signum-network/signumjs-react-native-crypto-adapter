@@ -5,8 +5,15 @@ import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
-
 import { useColorScheme } from '@/hooks/useColorScheme';
+
+/**
+ * The next steps are required to initialize signumjs/crypto module for Expo
+ */
+import {Crypto} from '@signumjs/crypto'
+import {ReactNativeExpoCryptoProvider} from "@signumjs/react-native-expo-crypto-adapter"
+
+Crypto.init(new ReactNativeExpoCryptoProvider());
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();

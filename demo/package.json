@@ -18,8 +18,12 @@
     "@expo/vector-icons": "^14.0.2",
     "@react-navigation/bottom-tabs": "^7.2.0",
     "@react-navigation/native": "^7.0.14",
+    "@signumjs/core": "^2.0.2",
+    "@signumjs/crypto": "file:signumjs-crypto-2.0.4.tgz",
+    "@signumjs/react-native-expo-crypto-adapter": "file:signumjs-react-native-expo-crypto-adapter-1.0.0.tgz",
     "expo": "~52.0.23",
     "expo-constants": "~17.0.3",
+    "expo-dev-client": "~5.0.8",
     "expo-font": "~13.0.2",
     "expo-haptics": "~14.0.0",
     "expo-linking": "~7.0.3",
@@ -37,8 +41,7 @@
     "react-native-safe-area-context": "4.12.0",
     "react-native-screens": "~4.4.0",
     "react-native-web": "~0.19.13",
-    "react-native-webview": "13.12.5",
-    "expo-dev-client": "~5.0.8"
+    "react-native-webview": "13.12.5"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

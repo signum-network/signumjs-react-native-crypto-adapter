@@ -10,12 +10,12 @@ import {
     Crypto
 } from "@signumjs/crypto";
 
-import {ReactNativeExpoCryptoProvider} from "../ReactNativeExpoCryptoProvider";
+import {ReactNativeExpoCryptoAdapter} from "../ReactNativeExpoCryptoAdapter";
 
 describe('Encrypt and Decrypt - No Crypto-JS', () => {
 
     beforeAll(() => {
-        Crypto.getInstance().setCustomProvider(new ReactNativeExpoCryptoProvider())
+        Crypto.init(new ReactNativeExpoCryptoAdapter())
     })
 
     describe('Data', () => {

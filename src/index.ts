@@ -1,1 +1,1 @@
-export * from "./ReactNativeExpoCryptoProvider"
+export * from "./ReactNativeExpoCryptoAdapter"

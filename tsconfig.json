@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
     "target": "es2018",
-    "module": "commonjs",
+    "module": "es2020",
     "declaration": true,
-    "outDir": "./dist",
+    "outDir": "./out",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-//    "jsx": "react-native"
+    "moduleResolution": "Node"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "demo", "src/__tests__"]

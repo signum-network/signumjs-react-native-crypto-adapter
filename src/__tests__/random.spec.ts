@@ -1,11 +1,11 @@
 import "./__mocks__/expo-crypto"
 import {describe, expect, test, beforeAll} from 'vitest';
 import {Crypto, getRandomBytes, getRandomString, getRandomWords} from "@signumjs/crypto";
-import {ReactNativeExpoCryptoProvider} from "../ReactNativeExpoCryptoProvider";
+import {ReactNativeExpoCryptoAdapter} from "../ReactNativeExpoCryptoAdapter";
 
 describe('random', () => {
     beforeAll(() => {
-        Crypto.getInstance().setCustomProvider(new ReactNativeExpoCryptoProvider())
+        Crypto.init(new ReactNativeExpoCryptoAdapter())
     })
     describe('getRandomBytes', () => {
 
