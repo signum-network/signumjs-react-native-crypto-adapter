@@ -4,7 +4,7 @@ This is the React Native Expo implementation of the CryptoAdapter for [@signumjs
 
 > Note: this adapter does only work with Expo - not for bare React Native!
 
-For any Crypto operations, like signing transactions, decrypting P2P messages or even hash related operations
+For any Crypto operations, like signing transactions, en/decrypting P2P messages or even hash related operations
 you need to install this adapter.
 
 ## Installation
@@ -15,7 +15,7 @@ you need to install this adapter.
 npm install @signumjs/crypto @signumjs/react-native-expo-crypto-adapter
 ```
 
-2. Create or modify the Expo Apps `metro.config.js` to remove default providers from bundler
+2. Create or modify the Expo Apps `metro.config.js` to remove default crypto adapters from bundler
 
 ```js
 // metro.config.js
@@ -23,9 +23,8 @@ const { getDefaultConfig } = require('@expo/metro-config');
 
 const defaultConfig = getDefaultConfig(__dirname);
 defaultConfig.resolver.blockList = [
-    /providers\/.+$/
+    /@signumjs\/crypto\/adapters\/.+$/
 ];
-
 module.exports = defaultConfig;
 
 ```
@@ -40,11 +39,15 @@ In your entry point of your application, e.g. `./app/_layout.tsx` you have to ad
  * The next steps are required to initialize signumjs/crypto module for Expo
  */
 import {Crypto} from '@signumjs/crypto'
-import {ReactNativeExpoCryptoProvider} from "@signumjs/react-native-expo-crypto-adapter"
+import {ReactNativeExpoCryptoAdapter} from "@signumjs/react-native-expo-crypto-adapter"
 
-Crypto.init(new ReactNativeExpoCryptoProvider());
+Crypto.init(new ReactNativeExpoCryptoAdapter());
 ```
 
 # Example
 
 Find a complete example app [here](./demo/README.md)
+
+
+# Troubleshooting
+

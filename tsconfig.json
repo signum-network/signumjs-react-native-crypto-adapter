@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2018",
-    "module": "es2020",
+    "target": "ESNext",
+    "module": "NodeNext",
     "declaration": true,
     "outDir": "./out",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "Node"
+    "moduleResolution": "NodeNext"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "demo", "src/__tests__"]

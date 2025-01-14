@@ -1,2 +1,4 @@
 demo/
+__tests__/
+.idea
 *.tgz
