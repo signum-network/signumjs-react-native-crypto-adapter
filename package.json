@@ -23,7 +23,8 @@
     "build": "tsc",
     "compile": "tsc",
     "test": "vitest run",
-    "test:ci": "vitest run --coverage"
+    "test:ci": "vitest run --coverage",
+    "publish": "./publish.sh"
   },
   "peerDependencies": {
     "react-native": ">=0.60.0",
