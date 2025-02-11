@@ -40,7 +40,7 @@ read -r OTP
 
 # Publish with changeset
 echo "🌎Publishing version $VERSION..."
-npm publish --opt "$OTP"
+npm publish --otp "$OTP"
 
 git push origin "$VERSION"
 echo "🎉 Successfully published $VERSION"
