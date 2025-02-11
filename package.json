@@ -1,6 +1,6 @@
 {
   "name": "@signumjs/react-native-expo-crypto-adapter",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is the React Native Expo implementation of the CryptoAdapter for @signumjs/crypto",
   "keywords": [
     "signum",
@@ -13,6 +13,10 @@
   "author": "ohager",
   "private": false,
   "license": "Apache-2.0",
+  "main": "./out/index.js",
+  "engines": {
+    "node": ">=18"
+  },
   "exports": {
     ".": {
       "types": "./out/index.d.ts",
@@ -28,7 +32,7 @@
   },
   "peerDependencies": {
     "react-native": ">=0.60.0",
-    "@signumjs/crypto": "^2.0.5",
+    "@signumjs/crypto": "^2.0.6",
     "expo": "^52.0.24"
   },
   "dependencies": {
