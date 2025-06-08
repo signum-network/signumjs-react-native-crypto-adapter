@@ -37,8 +37,8 @@
   },
   "dependencies": {
     "aes-js": "^3.1.2",
-    "expo-crypto": "~14.0.2",
-    "js-sha256": "^0.11.0",
+    "expo-crypto": "~14.1.5",
+    "js-sha256": "^0.11.1",
     "react-native-get-random-values": "^1.11.0"
   },
   "devDependencies": {
